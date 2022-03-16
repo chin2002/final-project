@@ -1,0 +1,65 @@
+.App {
+    text-align: left;
+}
+
+.App-header {
+    
+    background-color: #282c34;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);  
+    color: white;
+}
+
+.rect{
+    padding: 10vh 60vh;
+    border: #282c34;
+    border-radius: 3vh;
+    background-color :blueviolet;
+}
+
+/*.map {
+    height: 40vh;
+    width: 60vh;
+}*/
+
+.image-container {
+    margin: 10vh 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.image {
+    border-radius: 50%;
+}
+  
+.user-container {
+    padding-left: 20vh;
+    padding-right: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+}
+
+.info-column {
+    padding-left: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+}
+
+.info-item {
+    font-size: 25px;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.info-item1 {
+    font-size: 20px;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
