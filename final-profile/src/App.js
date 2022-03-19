@@ -13,7 +13,8 @@ export default function App(){
   const [userPhone, setUserPhone] = useState('');
   const [lat, setlat] = useState('');
   const [lng, setLng] = useState('');
-  const [address, setAddress] = useState('');
+  const [address1, setAddress1] = useState('');
+  const [address2, setadress2] = useState('');
   const [dob, setDob] = useState('');
   const [imgUrl, setImgUrl] = useState('');
   
@@ -25,7 +26,8 @@ export default function App(){
     setUserPhone(user.results[0].phone);
     setlat(user.results[0].location.coordinates.latitude);
     setLng(user.results[0].location.coordinates.longitude);
-    setAddress(user.results[0].location.street.number + ", " + user.results[0].location.street.name + " street, " + user.results[0].location.city + ",\n " + user.results[0].location.state + ", " + user.results[0].location.country + ", " + user.results[0].location.postcode);
+    setAddress1(user.results[0].location.street.number + ", " + user.results[0].location.street.name + " street, " + user.results[0].location.city + ", ");
+    setadress2(user.results[0].location.state + ", " + user.results[0].location.country + ", " + user.results[0].location.postcode);
     console.log(user.results[0].dob);
     setDob(DateOfBirth(user.results[0].dob.date));
     setImgUrl(user.results[0].picture.large);
@@ -52,25 +54,25 @@ export default function App(){
       <div className='App-header'> PROFILE PAGE </div>
       <div className='image-container'>
           <img class='image' src={imgUrl} alt="profile-pic"></img>
-        <div className='rect'>  
+        <div className='rect'>
+         {userName}
         </div>
       </div>
       <div className='user-container'>
         <div className='info-column'>
-          <div className='info-item'>Name </div>
           <div className='info-item'>Gender </div>
           <div className='info-item'>Username </div>
           <div className='info-item'>Date of Birth </div>
           <div className='info-item'>Phone No. </div>
           <div className='info-item'>Address </div>
+          <div className='blank'>{}</div>
         </div>
         <div className='info-column'>
-         <div className='info-item'>{userName}</div>
          <div className='info-item'>{userGender}</div>
          <div className='info-item'>{userUserName}</div>
          <div className='info-item'>{dob}</div>
          <div className='info-item'>{userPhone}</div>
-         <div className='info-item1'>{address}</div>
+         <div className='info-item1'>{address1}<br/>{address2}</div>
         </div>
       </div>
     </div>

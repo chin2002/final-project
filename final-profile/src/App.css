@@ -15,10 +15,14 @@
 }
 
 .rect{
-    padding: 10vh 60vh;
+    width: 120vh;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 4vh;
+    padding-bottom: 5vh;
     border: #282c34;
     border-radius: 3vh;
-    background-color :blueviolet;
+    background-image:linear-gradient(to bottom right, rgb(235, 235, 193), white, rgb(235, 204, 204));
 }
 
 /*.map {
@@ -46,10 +50,11 @@
 }
 
 .info-column {
-    padding-left: 10vh;
+    padding-left: 20vh;
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
+    align-items: left;
 }
 
 .info-item {
@@ -59,7 +64,12 @@
 }
 
 .info-item1 {
-    font-size: 20px;
+    font-size: 25px;
     padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding-bottom: 0.5vh;
+    padding-right: 0.5vh
+}
+
+.blank {
+    padding-top: 40px;
 }
